@@ -828,6 +828,11 @@ _nano_destroy(nanozone_t *nanozone)
 
 /******************           nanozone dispatch          **********************/
 
+
+
+
+
+
 static void *
 nano_malloc(nanozone_t *nanozone, size_t size)
 {
@@ -840,9 +845,16 @@ nano_malloc(nanozone_t *nanozone, size_t size)
 		}
 	}
 
+	
+	// helper, 一看就知道是，次要逻辑
 	malloc_zone_t *zone = (malloc_zone_t *)(nanozone->helper_zone);
 	return zone->malloc(zone, size);
 }
+
+
+
+
+
 
 static void *
 nano_forked_malloc(nanozone_t *nanozone, size_t size)

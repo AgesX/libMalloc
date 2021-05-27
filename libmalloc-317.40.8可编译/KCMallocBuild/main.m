@@ -22,6 +22,13 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
 		// 研究的是 calloc 返回的值
 		// 为当前的指针 *p
+		
+		
+		
+		
+		
+		
+		// calloc , 	开辟内存
 		void *p = calloc(1, 40);
 		
 		
