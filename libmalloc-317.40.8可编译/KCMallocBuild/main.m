@@ -20,9 +20,33 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+		// 研究的是 calloc 返回的值
+		// 为当前的指针 *p
+		void *p = calloc(1, 40);
+		
+		
+		
+		
+		
+		
+		
+		/*
 		void *p = calloc(1, 24);
 		NSLog(@"%lu",malloc_size(p));
         NSLog(@"Hello, World!");
+		 
+		 
+		 */
     }
     return 0;
 }
+
+
+
+
+
+
+
+
+
+

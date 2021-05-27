@@ -1558,8 +1558,19 @@ _malloc_zone_calloc(malloc_zone_t *zone, size_t num_items, size_t size,
 		internal_check();
 	}
 	// Cooci 和谐学习不急不躁 这个流程是有优化的 会和苹果原系统不一定完全重合
-	ptr = zone->calloc(zone, num_items, size);
+	
+	
+	// llvm 源代码，阅读的能力
+	
+	// 抓重点
+	// 分析的能力
+	
+	
+	ptr = zone->calloc(zone, num_items, size);     //  br
 
+	
+	
+	
 	if (os_unlikely(malloc_logger)) {
 		malloc_logger(MALLOC_LOG_TYPE_ALLOCATE | MALLOC_LOG_TYPE_HAS_ZONE | MALLOC_LOG_TYPE_CLEARED, (uintptr_t)zone,
 				(uintptr_t)(num_items * size), 0, (uintptr_t)ptr, 0);
