@@ -216,12 +216,31 @@ segregated_size_to_fit(nanozone_t *nanozone, size_t size, size_t *pKey)
 	}
 	
 	// 内存大小，字节对齐
+	
+	// 右移 4 位
 	k = (size + NANO_REGIME_QUANTA_SIZE - 1) >> SHIFT_NANO_QUANTUM; // round up and shift for number of quanta
+	
+	
+	// 左移 4 位
 	slot_bytes = k << SHIFT_NANO_QUANTUM;							// multiply by power of two quanta size
+	
+	
+	// 左移，右移
+	// 抹零，
+	// 干掉最后 4 位
+	
+	// 类似 16 的倍数
+	// 之前有一个   与操作
+	
 	*pKey = k - 1;													// Zero-based!
 
 	return slot_bytes;
 }
+
+
+
+
+
 
 
 
