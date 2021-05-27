@@ -152,6 +152,11 @@ divrem(unsigned long a, unsigned int b, unsigned int *remainder)
 	return a / b;
 }
 
+
+
+
+// 开辟内存， 与指针
+
 static MALLOC_INLINE void *
 segregated_next_block(nanozone_t *nanozone, nano_meta_admin_t pMeta, size_t slot_bytes, unsigned int mag_index)
 {
@@ -611,6 +616,17 @@ _nano_vet_and_size_of_free(nanozone_t *nanozone, const void *ptr)
 	}
 }
 
+
+
+
+
+
+
+
+
+
+
+
 static void *
 _nano_malloc_check_clear(nanozone_t *nanozone, size_t size, boolean_t cleared_requested)
 {
@@ -618,6 +634,13 @@ _nano_malloc_check_clear(nanozone_t *nanozone, size_t size, boolean_t cleared_re
 
 	void *ptr;
 	size_t slot_key;
+	
+	
+	
+	//	segregated,  	隔离
+	
+	
+	
 	size_t slot_bytes = segregated_size_to_fit(nanozone, size, &slot_key); // Note slot_key is set here
 	mag_index_t mag_index = nano_mag_index(nanozone);
 
@@ -695,6 +718,11 @@ _nano_malloc_check_clear(nanozone_t *nanozone, size_t size, boolean_t cleared_re
 		((chained_block_t)ptr)->double_free_guard = 0;
 		((chained_block_t)ptr)->next = NULL; // clear out next pointer to protect free list
 	} else {
+		
+		
+		
+		
+		
 		ptr = segregated_next_block(nanozone, pMeta, slot_bytes, mag_index);
 	}
 
@@ -703,6 +731,17 @@ _nano_malloc_check_clear(nanozone_t *nanozone, size_t size, boolean_t cleared_re
 	}
 	return ptr;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 static void *
 _nano_malloc_check_scribble(nanozone_t *nanozone, size_t size)
@@ -837,6 +876,12 @@ static void *
 nano_malloc(nanozone_t *nanozone, size_t size)
 {
 	if (size <= NANO_MAX_SIZE) {
+		// 肯定会，小于边界，
+		
+		// 走下面
+		
+		// p,    ptr,     pointer
+		
 		void *p = _nano_malloc_check_clear(nanozone, size, 0);
 		if (p) {
 			return p;
