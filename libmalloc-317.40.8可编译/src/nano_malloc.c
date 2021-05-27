@@ -195,6 +195,17 @@ segregated_next_block(nanozone_t *nanozone, nano_meta_admin_t pMeta, size_t slot
 	}
 }
 
+
+
+
+
+
+
+
+
+// 哈希算法
+
+
 static MALLOC_INLINE size_t
 segregated_size_to_fit(nanozone_t *nanozone, size_t size, size_t *pKey)
 {
@@ -203,12 +214,19 @@ segregated_size_to_fit(nanozone_t *nanozone, size_t size, size_t *pKey)
 	if (0 == size) {
 		size = NANO_REGIME_QUANTA_SIZE; // Historical behavior
 	}
+	
+	// 内存大小，字节对齐
 	k = (size + NANO_REGIME_QUANTA_SIZE - 1) >> SHIFT_NANO_QUANTUM; // round up and shift for number of quanta
 	slot_bytes = k << SHIFT_NANO_QUANTUM;							// multiply by power of two quanta size
 	*pKey = k - 1;													// Zero-based!
 
 	return slot_bytes;
 }
+
+
+
+
+
 
 static MALLOC_INLINE index_t
 offset_to_index(nanozone_t *nanozone, nano_meta_admin_t pMeta, uintptr_t offset)
@@ -640,8 +658,17 @@ _nano_malloc_check_clear(nanozone_t *nanozone, size_t size, boolean_t cleared_re
 	//	segregated,  	隔离
 	
 	
-	
+	// 研究的重心
+	// 内存对齐
 	size_t slot_bytes = segregated_size_to_fit(nanozone, size, &slot_key); // Note slot_key is set here
+	
+	
+	
+	
+	
+	
+	
+	
 	mag_index_t mag_index = nano_mag_index(nanozone);
 
 	nano_meta_admin_t pMeta = &(nanozone->meta_data[mag_index][slot_key]);
