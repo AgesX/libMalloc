@@ -30,6 +30,34 @@
 @end
 
 
+void float2HEX(float f){
+    union uuf { float f; char s[4]; } uf;
+    uf.f = f;
+    printf("0x");
+    for (int i = 3; i > 0; i--)
+        printf("%02x", 0xff & uf.s[i]);
+    printf("\n");
+}
+
+
+
+
+
+
+void double2HEX(double d){
+    union uud { double d; char s[8]; } ud;
+    ud.d = d;
+    printf("0x");
+    for (int i=7; i >= 0; i--)
+        printf("%02x", 0xff & ud.s[i]);
+    
+    printf("\n");
+    
+}
+
+
+
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
