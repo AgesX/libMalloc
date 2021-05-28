@@ -8,6 +8,26 @@
 #import <Foundation/Foundation.h>
 
 
+
+
+
+// 什么是对象
+
+
+// 结构体，在 C++ 中，可以继承
+
+
+// 结构体，在 c 中，可以伪继承
+
+
+
+// IMPL
+// L， Low Level, 我觉得是
+
+
+
+
+
 @interface Warrior : NSObject
 
 
