@@ -34,7 +34,7 @@ void float2HEX(float f){
     union uuf { float f; char s[4]; } uf;
     uf.f = f;
     printf("0x");
-    for (int i = 3; i > 0; i--)
+    for (int i = 3; i >= 0; i--)
         printf("%02x", 0xff & uf.s[i]);
     printf("\n");
 }
@@ -63,13 +63,16 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         
+        float2HEX(190.5);
+        double2HEX(190.5);
+        
         
         
         
         Warrior * k = [Warrior new];
         k.shield = @"fast";
         k.weapon = @"furious";
-        k.ally = 180;
+        k.ally = 190.5;
         
         
         
