@@ -59,6 +59,7 @@ int main(int argc, const char * argv[]) {
 
 
 // 最后的一个 x, 打印的意思
+// 使用 16 进制，来打印
 
 
 
@@ -74,3 +75,15 @@ int main(int argc, const char * argv[]) {
 
 
 
+//  x/4gw k
+// 采用 w, 以 16 进制打印
+// 只打印 8 个
+
+
+
+
+
+
+
+
+// 内存布局上，double 和 float , 是有特殊处理的
