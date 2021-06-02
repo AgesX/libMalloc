@@ -30,6 +30,13 @@ based on LGCooci/libMalloc
 <hr>
 
 
+// 结构体内存，不是 8 字节，根据属性和字节对齐
+// 结构体指针，占内存 8 字节
+
+
+<hr>
+
+
 <hr>
 
 sizeof， 当前类型的大小
