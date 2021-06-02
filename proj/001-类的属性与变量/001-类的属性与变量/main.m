@@ -88,6 +88,8 @@ void lgObjc_copyIvar_copyProperies(Class pClass){
 
 
 #pragma mark - 各种类型编码
+
+
 void lgTypes(void){
     NSLog(@"char --> %s",@encode(char));
     NSLog(@"int --> %s",@encode(int));

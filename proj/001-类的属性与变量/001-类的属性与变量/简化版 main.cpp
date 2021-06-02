@@ -25,6 +25,13 @@ struct LGPerson_IMPL {
 
 
 
+///
+
+
+
+///
+
+
 
 
 
@@ -247,4 +254,49 @@ static struct /*_method_list_t*/ {
     {(struct objc_selector *)"name", "@16@0:8", (void *)_I_LGPerson_name},
     {(struct objc_selector *)"setName:", "v24@0:8@16", (void *)_I_LGPerson_setName_}}
 };
+
+
+
+
+
+
+
+
+
+///
+
+
+
+///
+
+
+
+
+
+
+static struct /*_prop_list_t*/ {
+    unsigned int entsize;  // sizeof(struct _prop_t)
+    unsigned int count_of_properties;
+    struct _prop_t prop_list[2];
+} _OBJC_$_PROP_LIST_LGPerson __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+    sizeof(_prop_t),
+    2,
+    {{"nickName","T@\"NSString\",C,N,V_nickName"},
+    {"name","T@\"NSString\",&,N,V_name"}}
+};
+// attribute
+
+
+
+
+
+//  C,N,V_nickName
+//  C,N,V
+
+// 都是对应属性的 attribute
+// attribute 属性， 描述
+
+
+
+
 
