@@ -136,7 +136,32 @@ static struct /*_method_list_t*/ {
 } _OBJC_$_INSTANCE_METHODS_LGPerson __attribute__ ((used, section ("__DATA,__objc_const"))) = {
     sizeof(_objc_method),
     8,
+    
+    
+    
+    
+    
+    
+    // "@16@0:8",   这个是签名
+    // 签名，是通过标识，更容易的区分
+    
+    
+    
+    
+    // 编码方式
+    // type encoding
+    
+    
+    
+    
+    
     {{(struct objc_selector *)"nickName", "@16@0:8", (void *)_I_LGPerson_nickName},
+    
+        
+        
+        
+        
+        
     {(struct objc_selector *)"setNickName:", "v24@0:8@16", (void *)_I_LGPerson_setNickName_},
     {(struct objc_selector *)"name", "@16@0:8", (void *)_I_LGPerson_name},
     {(struct objc_selector *)"setName:", "v24@0:8@16", (void *)_I_LGPerson_setName_},

@@ -88,7 +88,7 @@ void lgObjc_copyIvar_copyProperies(Class pClass){
 
 
 #pragma mark - 各种类型编码
-void lgTypes(){
+void lgTypes(void){
     NSLog(@"char --> %s",@encode(char));
     NSLog(@"int --> %s",@encode(int));
     NSLog(@"short --> %s",@encode(short));
@@ -128,7 +128,13 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
         
+        
+        
+        
          LGPerson *person = [LGPerson alloc];
+        
+        //   ivar_getTypeEncoding(CFBridgingRetain(person.name));
+        
          Class pClass     = object_getClass(person);
         lgTypes();
          lgObjc_copyIvar_copyProperies(pClass);
