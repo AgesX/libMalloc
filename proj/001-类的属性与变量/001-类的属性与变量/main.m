@@ -56,9 +56,15 @@ void lgObjc_copyIvar_copyProperies(Class pClass){
 
 @interface LGPerson : NSObject
 {
+    
+    // 成员变量 ivar
+    
     NSString *hobby;
     NSObject *objc;
 }
+
+// 属性 property
+
 @property (nonatomic, copy) NSString *nickName;
 @property (nonatomic, strong) NSString *name;
 
