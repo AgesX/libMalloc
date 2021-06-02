@@ -70,6 +70,20 @@ static void _I_LGPerson_setNickName_(LGPerson * self, SEL _cmd, NSString *nickNa
 
 
 
+// 默认参数
+// LGPerson * self, SEL _cmd
+
+
+// LGPerson * self,
+// id
+// 符号 @， 通配符， 通用类型
+
+
+// SEL _cmd
+// 符号 :
+
+
+
 
 static NSString * _I_LGPerson_name(LGPerson * self, SEL _cmd) { return (*(NSString *__strong *)((char *)self + OBJC_IVAR_$_LGPerson$_name)); }
 

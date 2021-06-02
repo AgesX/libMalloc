@@ -124,23 +124,27 @@ void lgTypes(void){
     NSLog(@"int[] --> %s",@encode(typeof(b)));
 }
 
+void one(void){
+    
+    LGPerson *person = [LGPerson alloc];
+   
+   //   ivar_getTypeEncoding(CFBridgingRetain(person.name));
+   
+    Class pClass     = object_getClass(person);
+   
+    lgObjc_copyIvar_copyProperies(pClass);
+    
+}
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
         
-        
-        
-        
-         LGPerson *person = [LGPerson alloc];
-        
-        //   ivar_getTypeEncoding(CFBridgingRetain(person.name));
-        
-         Class pClass     = object_getClass(person);
         lgTypes();
-         lgObjc_copyIvar_copyProperies(pClass);
-
         
-        NSLog(@"Hello, World!");
+        
+         
     }
     return 0;
 }
