@@ -92,6 +92,23 @@ static void _I_LGPerson_setNickName_(LGPerson * self, SEL _cmd, NSString *nickNa
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 static NSString * _I_LGPerson_name(LGPerson * self, SEL _cmd) { return (*(NSString *__strong *)((char *)self + OBJC_IVAR_$_LGPerson$_name)); }
 
 
@@ -101,6 +118,29 @@ static NSString * _I_LGPerson_name(LGPerson * self, SEL _cmd) { return (*(NSStri
 
 
 // 赋值
+
+
+
+
+//  = name
+
+
+// 这里有一个赋值操作
+
+// C++ 中，操作比较直接
+// 没有 retain 和 release
+
+
+
+
+//  (char *)self + OBJC_IVAR_$_LGPerson$_name)
+
+//  从当前对象的地址 (char *)self
+
+// 平移多大的空间，  OBJC_IVAR_$_LGPerson$_name)
+
+
+
 static void _I_LGPerson_setName_(LGPerson * self, SEL _cmd, NSString *name) { (*(NSString *__strong *)((char *)self + OBJC_IVAR_$_LGPerson$_name)) = name; }
 // @end
 
