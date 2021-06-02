@@ -92,3 +92,57 @@ static void _I_LGPerson_setName_(LGPerson * self, SEL _cmd, NSString *name) { (*
 
 
 //   看起来， copy 和 strong 修饰, 对于属性的 getter 方法，没啥影响
+
+
+
+
+
+///
+
+
+
+///
+
+
+
+
+// 方法 : sel - imp
+// oc - c 函数实现
+// 封装
+// sel : funcHaha (sel)  ------   页码(imp)  --- 具体实现内容 (函数)
+
+// sel 相当于书的目录
+
+// sel 方法编号
+
+
+
+
+
+
+
+// @16@0:8
+// @: 返回值
+// 16 参数共用字节 16
+// 第二个 @ :第一个参数 8
+// 0 : 从0 开始
+// : : sel 8
+
+
+static struct /*_method_list_t*/ {
+    unsigned int entsize;  // sizeof(struct _objc_method)
+    unsigned int method_count;
+    struct _objc_method method_list[8];
+} _OBJC_$_INSTANCE_METHODS_LGPerson __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+    sizeof(_objc_method),
+    8,
+    {{(struct objc_selector *)"nickName", "@16@0:8", (void *)_I_LGPerson_nickName},
+    {(struct objc_selector *)"setNickName:", "v24@0:8@16", (void *)_I_LGPerson_setNickName_},
+    {(struct objc_selector *)"name", "@16@0:8", (void *)_I_LGPerson_name},
+    {(struct objc_selector *)"setName:", "v24@0:8@16", (void *)_I_LGPerson_setName_},
+    {(struct objc_selector *)"nickName", "@16@0:8", (void *)_I_LGPerson_nickName},
+    {(struct objc_selector *)"setNickName:", "v24@0:8@16", (void *)_I_LGPerson_setNickName_},
+    {(struct objc_selector *)"name", "@16@0:8", (void *)_I_LGPerson_name},
+    {(struct objc_selector *)"setName:", "v24@0:8@16", (void *)_I_LGPerson_setName_}}
+};
+
