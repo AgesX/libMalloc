@@ -169,8 +169,43 @@ static struct /*_method_list_t*/ {
     
     
     
+    
+    //  "@16@0:8"
+    
+    
+    //  @
+    //  第一个 @，  代表 id， 返回值
+    
+    
+    //  16
+    //  16 代表，总的开辟的内存为 16 字节
+    
+    
+    // @0
+    //  第一个 @，  代表 id， 代表第一个参数
+    //  从 0 号位，开始，               （  0 - 7  ）
+    //  占据的内存，是 8 个字节
+    
+    
+    // :8
+    // 符号 :
+    // 代表 sel, 方法编号
+    // 他的内存首地址，从第 8 字节开始        （  8 - 15  ）
+    
+    
+    
+    
+    
+    
+    
     {{(struct objc_selector *)"nickName", "@16@0:8", (void *)_I_LGPerson_nickName},
     
+    
+        
+        
+        
+        
+        
         
         
         
@@ -180,6 +215,34 @@ static struct /*_method_list_t*/ {
     {(struct objc_selector *)"name", "@16@0:8", (void *)_I_LGPerson_name},
     {(struct objc_selector *)"setName:", "v24@0:8@16", (void *)_I_LGPerson_setName_},
     {(struct objc_selector *)"nickName", "@16@0:8", (void *)_I_LGPerson_nickName},
+        
+        
+        
+    //  签名信息翻译
+    //  v24@0:8@16
+        
+    
+        
+    //  v
+    //  v , 返回值， 代表 void
+        
+        
+    // 24 , 总共占据 24 个字节
+    
+        
+    // 第一个参数，从 0 字节开始
+    // @， id 类型
+    
+        
+    // 第 2 个参数，从 8 字节开始
+    // :， sel
+        
+    
+    // 第 3 个参数，从 16 字节开始
+    // @， id 类型
+        
+        
+        
     {(struct objc_selector *)"setNickName:", "v24@0:8@16", (void *)_I_LGPerson_setNickName_},
     {(struct objc_selector *)"name", "@16@0:8", (void *)_I_LGPerson_name},
     {(struct objc_selector *)"setName:", "v24@0:8@16", (void *)_I_LGPerson_setName_}}
