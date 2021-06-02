@@ -274,9 +274,12 @@ static struct /*_method_list_t*/ {
 
 
 
+
+
+
 static struct /*_prop_list_t*/ {
-    unsigned int entsize;  // sizeof(struct _prop_t)
-    unsigned int count_of_properties;
+    unsigned int entsize;  // sizeof(struct _prop_t)    //   4 个字节
+    unsigned int count_of_properties;                   //   4 个字节
     struct _prop_t prop_list[2];
 } _OBJC_$_PROP_LIST_LGPerson __attribute__ ((used, section ("__DATA,__objc_const"))) = {
     sizeof(_prop_t),
@@ -300,3 +303,10 @@ static struct /*_prop_list_t*/ {
 
 
 
+
+
+
+struct _prop_t {
+    const char *name;
+    const char *attributes;
+};
