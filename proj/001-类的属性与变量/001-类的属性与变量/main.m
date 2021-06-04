@@ -163,6 +163,12 @@ int main(int argc, const char * argv[]) {
         
         BOOL re1 = [(id)[NSObject class] isKindOfClass:[NSObject class]];       //
         BOOL re2 = [(id)[NSObject class] isMemberOfClass:[NSObject class]];     //
+        
+        
+        
+        
+        
+        // LGPerson meta class,  NSObject meta , NSObject class
         BOOL re3 = [(id)[LGPerson class] isKindOfClass:[LGPerson class]];       //
         
         
