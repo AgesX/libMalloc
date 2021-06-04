@@ -60,9 +60,62 @@ int main(int argc, const char * argv[]) {
         }
 
         
+/*
+ nickName ---  T@"NSString",C,N,V_nickName --
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ T , 代表 type ，类型
+ 
+ 
+ 
+ 
+ C, 代表 copy , 内存管理
+ 
+ 
+ N， 代表 nonatomic , 线程管理
+ 
+ 
+ 
+ V, 代表 variable ， 是变量， 不是常量 constant
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ */
+        
+        
+        
+        
+        /*
+        
+        
+        name ---  T@"NSString",&,N,V_name --
+        
+
+        
+         
+         
+         &,   代表 strong , 内存管理, retain
+         retain 就是 strong
+         
+         
+         
+        */
     }
     return 0;
 }
+
+
 
 
 
