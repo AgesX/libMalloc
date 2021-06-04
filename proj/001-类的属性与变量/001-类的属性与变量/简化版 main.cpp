@@ -133,6 +133,10 @@ static NSString * _I_LGPerson_name(LGPerson * self, SEL _cmd) { return (*(NSStri
 
 
 
+
+
+// 下面，内存平移，访问属性
+
 //  (char *)self + OBJC_IVAR_$_LGPerson$_name)
 
 //  从当前对象的地址 (char *)self
