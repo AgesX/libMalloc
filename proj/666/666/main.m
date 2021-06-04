@@ -7,42 +7,33 @@
 
 #import <Foundation/Foundation.h>
 
-// 实际占据的首地址          长度 
-
-struct A{
-    int a;   // 0   4
-    char b;  // 4   1
-    short c;  // 6   2
-}one;  // 8
+#import <objc/runtime.h>
 
 
 
-struct B{
-    char b;   // 0   1
-    int c;   // 4    4
-    short d;  // 8  2
-}two;  //  12
+@interface Cavalier : NSObject
+{
+    
+    // 成员变量 ivar
+    
+    NSString *hobby;
+    NSObject *objc;
+}
+
+// 属性 property
+
+@property (nonatomic, copy) NSString *nickName;
+@property (nonatomic, strong) NSString *name;
 
 
-struct C{
-    int c;    // 0    4
-    double a;  // 8    8
-    char b;    // 16   1
-    struct A first;   // 20  8
-    short d;     // 28   2
-}three;     //   32
 
 
-
-struct D{
-    int c;   //  0   4
-    double a;   //   8    8
-    char b;    //   16     1
-    struct B second;   //    24   12
-    short d;   //   36   2
-}four;   //   40
+@end
 
 
+@implementation Cavalier
+
+@end
 
 
 
@@ -50,9 +41,24 @@ struct D{
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        NSLog(@" struct A: %lu -\n- struct B: %lu -\n- struct C: %lu -\n- struct D: %lu -\n-", sizeof(one), sizeof(two), sizeof(three), sizeof(four));
         
         
+        //  Objective-C Runtime Programming Guide
+        
+        
+        
+        
+        //  https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtPropertyIntrospection.html#//apple_ref/doc/uid/TP40008048-CH101-SW6
+        
+        
+        id LenderClass = objc_getClass("Cavalier");
+        unsigned int outCount, i;
+        objc_property_t *properties = class_copyPropertyList(LenderClass, &outCount);
+        for (i = 0; i < outCount; i++) {
+            objc_property_t property = properties[i];
+            fprintf(stdout, "%s ---  %s --  \n \n", property_getName(property), property_getAttributes(property));
+        }
+
         
     }
     return 0;

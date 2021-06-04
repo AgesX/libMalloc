@@ -160,9 +160,30 @@ int main(int argc, const char * argv[]) {
         //  [NSObject class] 的 isa 是 meta NSObject
         //  meta NSObject 继承自 [NSObject class]
         
+        // 上面的分析，是放屁
         
+        
+        
+        
+        // 没走 isKindOfClass 类方法
+        // LLVM 的 code gen , 又有底层优化
+        
+        // 类似 alloc 的流程
+        
+        
+        /*
+        // Calls [obj isKindOfClass]
+
+
+        BOOL
+        objc_opt_isKindOfClass(id obj, Class otherClass)
+         //  逻辑类似
+        
+         */
         BOOL re1 = [(id)[NSObject class] isKindOfClass:[NSObject class]];       //
         BOOL re2 = [(id)[NSObject class] isMemberOfClass:[NSObject class]];     //
+        
+        
         
         
         
