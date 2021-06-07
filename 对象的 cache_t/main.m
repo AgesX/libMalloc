@@ -55,4 +55,5 @@ int main(int argc, const char * argv[]) {
 
 
 //        LGPerson *p  = [[ LGPerson alloc ] init];
+//        调用 init 方法，
 //        cache 添加 1 个 bucket,  occupied + 1
