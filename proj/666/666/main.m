@@ -111,6 +111,16 @@ int main(int argc, const char * argv[]) {
          
          
         */
+        
+        
+        
+        for (unsigned i = 11;;) {
+            
+            NSLog(@"cruel   ");
+            // 无限循环
+        }
+        
+        
     }
     return 0;
 }
