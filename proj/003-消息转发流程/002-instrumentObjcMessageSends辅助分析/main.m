@@ -15,7 +15,7 @@ int main(int argc, const char * argv[]) {
 
         LGPerson *person = [LGPerson alloc];
         
-        instrumentObjcMessageSends(YES);
+      //  instrumentObjcMessageSends(YES);
         [person sayInstanceMethod];
         instrumentObjcMessageSends(NO);
         

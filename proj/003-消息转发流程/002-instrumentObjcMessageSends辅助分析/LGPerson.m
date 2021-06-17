@@ -11,6 +11,15 @@
 @implementation LGPerson
 
 
+// 给 selector , 换一个接收者
 
+
+
+- (id)forwardingTargetForSelector:(SEL)aSelector{
+    
+    
+    NSLog(@"ha ha ha %@", NSStringFromSelector(aSelector));
+    return [super forwardingTargetForSelector: aSelector];
+}
 
 @end
