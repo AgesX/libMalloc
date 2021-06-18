@@ -72,26 +72,6 @@
     
     
     
-    // sel - NSInvocation 事务
-    
-    
-    
-    
-    // 这里还可以保存 NSInvocation 的方法， 然后延迟调用
-    
-    
-    
-    
-    
-    
-    
-    // anInvocation.target = [LGStudent alloc];
-    
-    
-    anInvocation.selector = @selector(sayHi);
-    [anInvocation invoke];
-    
-    
     
     
 }
@@ -100,7 +80,7 @@
 
 
 
-// 竟然没有 crash
+// 竟然没有 crash, 抛弃了这个消息
 
 
 
