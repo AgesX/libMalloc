@@ -44,48 +44,8 @@
     
     
     
-    return [NSMethodSignature signatureWithObjCTypes: "v@:"];
-    
-    
-    
-    //  v@:
-    
-    //  返回值 + 参数类型
-    
+    return [super methodSignatureForSelector: aSelector];
 }
-
-
-
-
-- (void)forwardInvocation:(NSInvocation *)anInvocation{
-    
-    
-    
-    
-    
-    
-    NSLog(@"6  6  6 , %s - %@ - \n - ", __func__ , anInvocation);
-    
-    
-    
-    // sel - NSInvocation 事务
-    
-    anInvocation.target = [LGStudent alloc];
-    
-    [anInvocation invoke];
-    
-    
-    
-    
-}
-
-
-
-
-
-// 竟然没有 crash
-
-
 
 @end
 
