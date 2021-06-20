@@ -11,6 +11,9 @@
 @implementation LGPerson
 
 
+// 打印流程，分析问题
+
+
 
 - (void)sayHi{
     
@@ -19,8 +22,35 @@
 }
 
 
++ (BOOL)resolveInstanceMethod:(SEL)sel{
+    
+    NSLog(@"1   _   %s _ \n _ ", __func__);
+    return [super resolveInstanceMethod: sel];
+}
 
 
+
+
+- (id)forwardingTargetForSelector:(SEL)aSelector{
+    NSLog(@"2   _   %s  _ \n _", __func__);
+    return [super forwardingTargetForSelector: aSelector];
+}
+
+
+
+
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector{
+    
+    NSLog(@"3   _   %s  _ \n _ ", __func__);
+    return  [NSMethodSignature signatureWithObjCTypes: "v@:"];
+}
+
+
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation{
+    NSLog(@"4   _   %s  _ \n _", __func__);
+}
 
 
 
