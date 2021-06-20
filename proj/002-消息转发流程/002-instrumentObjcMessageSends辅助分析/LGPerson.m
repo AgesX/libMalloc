@@ -14,6 +14,8 @@
 // 打印流程，分析问题
 
 
+// 问题：  为什么 resolveInstanceMethod 会来两次
+
 
 - (void)sayHi{
     
