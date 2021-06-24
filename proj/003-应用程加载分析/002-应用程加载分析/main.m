@@ -74,3 +74,14 @@ __attribute__((constructor)) void qiangZi(){
 
 
 
+
+
+
+
+
+
+
+//  __attribute__ 总结
+
+
+//  https://www.jianshu.com/p/29eb7b5c8b2d
