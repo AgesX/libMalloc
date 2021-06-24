@@ -29,6 +29,48 @@ int main(int argc, char * argv[]) {
 
 // main 函数之前
 // load -> Cxx -> main
+
+
+
+
 __attribute__((constructor)) void qiangZi(){
     printf("来了 : %s \n",__func__);
 }
+
+
+
+//  __attribute__关键字用来描述函数，变量和数据类型的属性，
+
+//  用于编译器对源代码的优化。
+
+
+//  函数属性(Function Attribute)
+
+
+//  constructor
+
+
+//  构造器， constructor 修饰的函数会在 main 函数之前执行
+
+/*
+ 
+ attribute是GNU C特色之一,
+ 
+ 在iOS用的比较广泛.
+ 
+ 系统中有许多地方使用到.
+
+
+
+ attribute
+ 可以设置函数属性（Function Attribute ）
+ 、变量属性（Variable Attribute ）
+ 和类型属性（Type Attribute)等.
+
+
+
+
+*/
+
+
+
